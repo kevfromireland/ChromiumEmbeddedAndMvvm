@@ -19,5 +19,17 @@ namespace ChromiumEmbeddedAndMvvm.Models
         {
             MessageBox.Show(new StackFrame().ToString());
         }
+
+        public void BreakIntoDebugger()
+        {
+            if (Debugger.IsAttached)
+            {
+                Debugger.Break();
+            }
+            else
+            {
+                MessageBox.Show("Attach the VS debugger to see this break");
+            }
+        }
     }
 }
