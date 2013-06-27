@@ -17,7 +17,19 @@ namespace ChromiumEmbeddedAndMvvm.Models
 
         public void DisplayCallStack()
         {
-            MessageBox.Show(new StackFrame().ToString());
+            SomeRecursiveCall(0);
+        }
+
+        public void SomeRecursiveCall(int i)
+        {
+            if (i == 10)
+            {
+                MessageBox.Show(new StackTrace().ToString());
+            }
+            else
+            {
+                SomeRecursiveCall(++i);
+            }
         }
 
         public void BreakIntoDebugger()
