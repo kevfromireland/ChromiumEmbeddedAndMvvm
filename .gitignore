@@ -1,0 +1,4 @@
+**.pdb
+ChromiumEmbeddedAndMvvm/bin/**
+ChromiumEmbeddedAndMvvm/obj/**
+packages/**
